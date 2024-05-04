@@ -183,7 +183,9 @@ body {
 }
 
 
-
+/* #strand *{
+    border: 2px black solid;
+} */
 #strand #infoAboutStrand {
     border: 2px black solid;
     margin-left: 2%;
