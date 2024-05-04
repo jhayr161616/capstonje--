@@ -28,7 +28,7 @@ body {
     font-size: 1.2rem;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(6px);
-    position: fixed;
+    /* position: fixed; */
     height: 11%;
     display: flex;
     min-width: 100%;
@@ -149,6 +149,7 @@ body {
 
 }
 
+
 #strand #pindutanSaStrand {
     display: flex;
     min-height: 90dvh;
@@ -157,7 +158,6 @@ body {
     color: white;
 
 }
-
 
 #strand #pindutanSaStrand aside li {
     display: flex;
@@ -193,6 +193,8 @@ body {
     height: 80%;
     border-radius: 5%;
 }
+
+
 
 #gasInfo {
     background-color: red;

@@ -14,6 +14,7 @@ const tvlictInfo = document.querySelector("#tvlictInfo");
 const tvlheInfo = document.querySelector("#tvlheInfo");
 const adInfo = document.querySelector("#adInfo");
 let first = false;
+
 gasInfo.style.display = "block";
 humsInfo.style.display = "none";
 abmInfo.style.display = "none";
@@ -28,7 +29,7 @@ if(!first){
     first = true;
 }
 function buttonClickHandler(clickedButton, color, info) {
-    // Remove background color from all buttons
+    
 
     const allButtons = [gasButton, humssButton, abmButton, stemButton, tvlIctButton, tvlHeButton, adButton];
     allButtons.forEach(button => {
