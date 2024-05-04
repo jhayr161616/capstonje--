@@ -156,7 +156,7 @@ body {
     min-width: 30dvh;
     align-items: center;
     color: white;
-
+    
 }
 
 #strand #pindutanSaStrand aside li {
@@ -186,6 +186,8 @@ body {
 /* #strand *{
     border: 2px black solid;
 } */
+
+
 #strand #infoAboutStrand {
     border: 2px black solid;
     margin-left: 2%;
@@ -193,15 +195,55 @@ body {
     height: 80%;
     border-radius: 5%;
 }
+#infoAboutStrand nav{
+    display: flex;
+    justify-content: space-around;
+    border: 2px black solid;
 
+    
+}
 
+#infoAboutStrand nav li{
+    display: flex;
+    flex-basis: 50%;
+}
+#infoAboutStrand nav li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-grow: 50;
+    justify-content: center;
+    flex-basis: 50%;
+    border-radius: 30px;
+    padding: 10%;
+    
+    
+}
+
+#infoAboutStrand nav li a:hover{
+    background-color: rgb(253, 62, 62);
+}
 
 #gasInfo {
     background-color: red;
     width: 100%;
     height: 100%;
     border-radius: 5%;
+}
 
+#gasInfo #aboutGas p{
+    color: white;
+    text-align: center;
+    margin: 10%;
+}
+#gasInfo #aboutGas img{
+    width: 10%;
+    margin-top: 5%
+}
+#gasInfo #aboutGas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #humsInfo {
@@ -251,6 +293,7 @@ body {
     border-radius: 5%;
 
 }
+
 
 #FAQ {
     height: 100dvh;
