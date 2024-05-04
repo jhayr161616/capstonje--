@@ -1,0 +1,257 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    font-family: "Poppins";
+}
+
+html {
+    scroll-padding-top: 8%;
+}
+
+
+
+body {
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(141deg, #0fb8ad 0%, #5acfdc 51%, #2cb5e8 80%);
+
+}
+
+
+#header {
+    font-family: "radley";
+    color: white;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    height: 11%;
+    display: flex;
+    min-width: 100%;
+    flex-grow: 30ch;
+}
+
+/*#logo {
+    background-image: url("pcaatLogo.png");
+    height: 100px;
+    width: 100px;
+    background-size:cover;
+}*/
+
+#header img {
+    flex-basis: 10dvh;
+
+}
+
+
+
+#school {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+}
+
+
+
+#pindutan {
+    display: flex;
+    list-style-type: none;
+    flex-basis: 50%;
+    justify-content: end;
+    align-items: center;
+    font-size: 125%;
+    padding-right: 20px;
+}
+
+#pindutan li {
+    display: inline;
+    padding: 1rem;
+
+
+
+}
+
+#pindutan li:hover {
+    background-color: rgba(255, 255, 255, 0.297);
+    cursor: pointer;
+}
+
+#header * {
+    font-family: "radley";
+
+}
+
+#header nav li a:link {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+
+}
+
+#header nav li a:visited {
+    color: white;
+}
+
+#home {
+    height: 100dvh;
+    width: 100%;
+    background-image: url("building.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+#homeContent {
+    text-align: center;
+    width: 70%;
+}
+
+#homeContent h1 {
+    line-height: 4.7rem;
+    font-size: 5rem;
+}
+
+#homeContent p {
+
+    font-size: 1.4rem;
+
+}
+
+
+#orgChart {
+    height: 100dvh;
+    width: 100%;
+    /* background-color: brown; */
+    margin: 0;
+    padding: 0;
+}
+
+#strand {
+    height: 100dvh;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* background-image: url('StrandBG.jpg'); */
+    background-size: cover;
+    
+
+}
+
+#strand #pindutanSaStrand {
+    display: flex;
+    min-height: 90dvh;
+    min-width: 30dvh;
+    align-items: center;
+    color: white;
+
+}
+
+
+#strand #pindutanSaStrand aside li {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-bottom: 20px;
+}
+
+
+#strand #pindutanSaStrand aside li button {
+    color: black;
+    text-decoration: none;
+
+    margin: 15%;
+    margin-left: 60%;
+    padding: 10%;
+    width: 160%;
+    text-align: center;
+    display: block;
+    font-size: 154%;
+    background-color: #D9D9D9;
+    border: none;
+}
+
+
+
+#strand #infoAboutStrand {
+    border: 2px black solid;
+    margin-left: 2%;
+    width: 75%;
+    height: 80%;
+    border-radius: 5%;
+}
+
+#gasInfo {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#humsInfo {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#abmInfo {
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#stemInfo {
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#tvlictInfo {
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#tvlheInfo {
+    background-color: purple;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#adInfo {
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+
+}
+
+#FAQ {
+    height: 100dvh;
+    width: 100%;
+    /* background-color: rgb(81, 22, 230); */
+    margin: 0;
+    padding: 0;
+}
