@@ -152,18 +152,19 @@ body {
 
 #strand #pindutanSaStrand {
     display: flex;
-    min-height: 90dvh;
-    min-width: 30dvh;
+    min-height: 90%;
+    min-width: 12%;
     align-items: center;
     color: white;
-    
+    border: 2PX LIME solid;
+    flex-grow: 1%;
 }
 
 #strand #pindutanSaStrand aside li {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    margin-bottom: 20px;
+    margin-bottom: 20%;
 }
 
 
@@ -235,6 +236,7 @@ body {
     color: white;
     text-align: center;
     margin: 10%;
+    
 }
 #gasInfo #aboutGas img{
     width: 10%;
