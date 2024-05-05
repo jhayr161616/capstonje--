@@ -28,19 +28,13 @@ body {
     font-size: 1.2rem;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(6px);
-    /* position: fixed; */
+    position: fixed;
     height: 11%;
     display: flex;
     min-width: 100%;
     flex-grow: 30ch;
 }
 
-/*#logo {
-    background-image: url("pcaatLogo.png");
-    height: 100px;
-    width: 100px;
-    background-size:cover;
-}*/
 
 #header img {
     flex-basis: 10dvh;
@@ -156,7 +150,6 @@ body {
     min-width: 12%;
     align-items: center;
     color: white;
-    border: 2PX LIME solid;
     flex-grow: 1%;
 }
 
@@ -188,9 +181,8 @@ body {
     border: 2px black solid;
 } */
 
-
+ 
 #strand #infoAboutStrand {
-    border: 2px black solid;
     margin-left: 2%;
     width: 75%;
     height: 80%;
@@ -199,7 +191,6 @@ body {
 #infoAboutStrand nav{
     display: flex;
     justify-content: space-around;
-    border: 2px black solid;
 
     
 }
@@ -208,7 +199,7 @@ body {
     display: flex;
     flex-basis: 50%;
 }
-#infoAboutStrand nav li a{
+#infoAboutStrand nav li button{
     text-decoration: none;
     color: white;
     display: flex;
@@ -217,39 +208,47 @@ body {
     flex-basis: 50%;
     border-radius: 30px;
     padding: 10%;
-    
-    
+    background-color: #dc5a5a00;
+    border: none;
+    cursor: pointer;
+    font-size: 130%;
 }
-
-#infoAboutStrand nav li a:hover{
-    background-color: rgb(253, 62, 62);
+#gasInfo button{
+    background-color: #B52412;
 }
 
 #gasInfo {
-    background-color: red;
+    background: url('students.png');
+    background-size: cover;
     width: 100%;
     height: 100%;
     border-radius: 5%;
 }
 
-#gasInfo #aboutGas p{
+
+#strand #infoAboutStrand ul li{
+    color: white;
+    font-size: 150%;
+}
+#strand p{
     color: white;
     text-align: center;
-    margin: 10%;
+    margin: 3% 2% 2% 2%;
     
 }
-#gasInfo #aboutGas img{
+#strand img{
     width: 10%;
     margin-top: 5%
 }
-#gasInfo #aboutGas{
+.infos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #humsInfo {
-    background-color: green;
+    background: url('green.png');
+    background-size: cover;
     width: 100%;
     height: 100%;
     border-radius: 5%;
