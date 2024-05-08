@@ -43,7 +43,6 @@ function buttonClickHandler(clickedButton, color, info) {
         infos.style.display = "none";
     })
     info.style.display = "block";
-    console.log(gasInfo.style.display);   
     clickedButton.style.transition = 0.5 + 's' + " ease";
     clickedButton.style.color = "white";
     clickedButton.style.backgroundColor = color;
@@ -51,8 +50,8 @@ function buttonClickHandler(clickedButton, color, info) {
 
 
 gasButton.addEventListener('click', () => buttonClickHandler(gasButton, "#B52412", gasInfo));
-humssButton.addEventListener('click', () => buttonClickHandler(humssButton, "green", humsInfo));
-abmButton.addEventListener('click', () => buttonClickHandler(abmButton, "yellow", abmInfo));
+humssButton.addEventListener('click', () => buttonClickHandler(humssButton, "#18882e", humsInfo));
+abmButton.addEventListener('click', () => buttonClickHandler(abmButton, "#ffdc5f", abmInfo));
 stemButton.addEventListener('click', () => buttonClickHandler(stemButton, "blue", stemInfo));
 tvlIctButton.addEventListener('click', () => buttonClickHandler(tvlIctButton, "gray", tvlictInfo));
 tvlHeButton.addEventListener('click', () => buttonClickHandler(tvlHeButton, "purple", tvlheInfo));
@@ -68,24 +67,44 @@ const humsAbout = document.querySelector('#aboutHums');
 const humsCourse = document.querySelector("#coursesHums");
 const humsButtonCourse = document.querySelector("#humsButtonCourse")
 
+const abmButtonAbout = document.querySelector("#abmButtonAbout")
+const abmAbout = document.querySelector('#aboutAbm');
+const abmCourse = document.querySelector("#coursesAbm");
+const abmButtonCourse = document.querySelector("#abmButtonCourse")
+
+const stemButtonAbout = document.querySelector("#StemButtonAbout")
+const stemAbout = document.querySelector('#aboutStem');
+const stemCourse = document.querySelector("#coursesStem");
+const stemButtonCourse = document.querySelector("#StemButtonCourse")
 let First = false;
 
 if(!First){
     gasAbout.style.display = 'flex';
     gasCourse.style.display = 'none';
+    humsCourse.style.display= "none";
+    abmCourse.style.display = "none";
     gasButtonAbout.style.backgroundColor = "#cb6254";
 }
 
 gasButtonAbout.addEventListener('click', () => strandHandler(gasButtonAbout, "#B52412", "#cb6254", gasAbout));
 gasButtonCourse.addEventListener('click', () => strandHandler(gasButtonCourse, "#B52412", "#cb6254", gasCourse));
-humsButtonAbout.addEventListener('click', () => strandHandler(humsButtonAbout, "green", "lime", humsAbout));
-humsButtonCourse.addEventListener('click', () => strandHandler(humsButtonCourse, "green", "lime", humsCourse));
+
+humsButtonAbout.addEventListener('click', () => strandHandler(humsButtonAbout, "green", "#18882e", humsAbout));
+humsButtonCourse.addEventListener('click', () => strandHandler(humsButtonCourse, "green", "#18882e", humsCourse));
+
+abmButtonAbout.addEventListener('click', () => strandHandler(abmButtonAbout, "green", "#fffebb", abmAbout));
+abmButtonCourse.addEventListener('click', () => strandHandler(abmButtonCourse, "green", "#fffebb", abmCourse));
+
+stemButtonAbout.addEventListener('click', () => strandHandler(stemButtonAbout, "green", "#fffebb", stemAbout));
+stemButtonCourse.addEventListener('click', () => strandHandler(stemButtonCourse, "green", "#fffebb", stemCourse));
+
 function strandHandler(click, color, whenHover, div){
-    const allButtons = [gasButtonAbout, gasButtonCourse, humsButtonAbout, humsButtonCourse];
+    const allButtons = [gasButtonAbout, gasButtonCourse, humsButtonAbout, humsButtonCourse, 
+                        abmButtonAbout, abmButtonCourse, stemButtonAbout, stemButtonCourse];
     allButtons.forEach(button => {
-        button.style.backgroundColor = color;
+        button.style.backgroundColor = "#ffffff00";
     })
-    const allDiv = [gasAbout, gasCourse, humsAbout,humsCourse];
+    const allDiv = [gasAbout, gasCourse, humsAbout,humsCourse, abmAbout, abmCourse, stemAbout, stemCourse];
     allDiv.forEach(div => {
         div.style.display = "none";
     })
