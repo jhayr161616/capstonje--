@@ -150,23 +150,23 @@ body {
     min-width: 12%;
     align-items: center;
     color: white;
-    flex-grow: 1%;
 }
 
-#strand #pindutanSaStrand aside li {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    margin-bottom: 20%;
-}
+ #strand #pindutanSaStrand aside  {
+    border: 2px red solid;
+    
 
+} 
+#strand #pindutanSaStrand aside li{
+    margin: 0;
+    padding: 0;
+}
 
 #strand #pindutanSaStrand aside li button {
     color: black;
     text-decoration: none;
 
-    margin: 15%;
-    margin-left: 60%;
+    margin:4%;
     padding: 10%;
     width: 160%;
     text-align: center;
@@ -187,6 +187,7 @@ body {
     width: 75%;
     height: 80%;
     border-radius: 5%;
+
 }
 #infoAboutStrand nav{
     display: flex;
@@ -228,7 +229,7 @@ body {
 
 #strand #infoAboutStrand ul li{
     color: white;
-    font-size: 150%;
+    font-size: 110%;
 }
 #strand p{
     color: white;
