@@ -29,7 +29,7 @@ body {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(6px);
     position: fixed;
-    height: 11%;
+    height: 13%;
     display: flex;
     min-width: 100%;
     flex-grow: 30ch;
@@ -214,8 +214,10 @@ body {
     cursor: pointer;
     font-size: 130%;
     height: 20%;
-    
+    border-radius: 30px;    
 }
+
+
 
 #infoAboutStrand nav li button:hover{
     cursor: pointer;
@@ -225,21 +227,25 @@ body {
 #strand #infoAboutStrand ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+    row-gap: 1%;
+    margin: 0;
 }
+
+
 #strand #infoAboutStrand ul li{
     color: white;
-    font-size: 110%;
+    font-size: 140%;
 }
 #strand p{
     color: white;
     text-align: center;
     margin: 3% 2% 2% 2%;
+    font-size: 130%;
     
 }
 #strand img{
     width: 10%;
-    margin-top: 5%
+    margin-top: 2%
 }
 .infos{
     display: flex;
@@ -315,7 +321,6 @@ body {
 #FAQ {
     height: 100dvh;
     width: 100%;
-    background-color: rgb(81, 22, 230);
     margin: 0;
     padding: 0;
 }

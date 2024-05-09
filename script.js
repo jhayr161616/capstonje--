@@ -110,8 +110,8 @@ if (!First) {
 gasButtonAbout.addEventListener('click', () => strandHandler(gasButtonAbout, "#cb6254", gasAbout));
 gasButtonCourse.addEventListener('click', () => strandHandler(gasButtonCourse, "#cb6254", gasCourse));
 
-humsButtonAbout.addEventListener('click', () => strandHandler(humsButtonAbout, "#27d049", humsAbout));
-humsButtonCourse.addEventListener('click', () => strandHandler(humsButtonCourse, "#27d049", humsCourse));
+humsButtonAbout.addEventListener('click', () => strandHandler(humsButtonAbout, "#1da538", humsAbout));
+humsButtonCourse.addEventListener('click', () => strandHandler(humsButtonCourse, "#1da538", humsCourse));
 
 abmButtonAbout.addEventListener('click', () => strandHandler(abmButtonAbout, "#ffd175", abmAbout));
 abmButtonCourse.addEventListener('click', () => strandHandler(abmButtonCourse, "#ffd175", abmCourse));
@@ -209,10 +209,36 @@ function orgChartButtons(department) {
             displayerblur.style.display = "block";
             break;
     }
+    
 }
 
 
 
 function backs() {
     displayerblur.style.display = "none";
+}
+
+const qe = document.querySelectorAll('.panel-title');
+const classs = document.querySelectorAll('.faq-question');
+
+const inputs = document.querySelector('input');
+
+function test(){
+    
+    
+    for(let i = 0; i < classs.length; i++){
+
+        let casese = inputs.value.toLowerCase();
+        console.log(casese);
+
+        let qes = qe[i].innerHTML.toLowerCase();
+        if(qes.includes(casese)){
+            
+    
+            classs[i].hidden = false;
+        } else{
+            classs[i].hidden = true;
+        }
+    }
+    inputs.value = "";
 }
