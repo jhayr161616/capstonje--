@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="orgChart.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap');
@@ -15,7 +16,7 @@
 <body>
     <div id="header">
         <div id="school">
-            <img src="pcaatLogo.png" width="50px">
+            <img src="/logo/pcaatLogo.png" width="50px">
             <h3>Philippine College of Advanced Arts And Technology </h3>
         </div>
         <div id="pindutan">
@@ -37,7 +38,39 @@
         </div>
     </div>
     <div id="orgChart">
-
+        <div class="CHART">
+            <div class="ORG" id="text"><button id="orgs" onclick="orgChartButtons()" class="ORGButton">ORGANIZATIONAL CHART</button></div>
+            <div class="MISO" id="text"><button id="orgs" onclick="orgChartButtons('miso')" class="MISOButton">MANAGEMENT INFORMATION SYSTEM</button>
+            </div>
+            <div class="SSD" id="text"><button id="orgs" onclick="orgChartButtons('SHSD')" class="SSDButton">SENIOR HIGH SCHOOL DEPARTMENT</button></div>
+            <div class="HR" id="text"><button id="orgs" onclick="orgChartButtons('HR')" class="HRButton">HUMAN RESOURCES DEVELOPMENT DEPARTMENT</button>
+            </div>
+            <div class="FAD" id="text"><button id="orgs" onclick="orgChartButtons('FAD')" class="FADButton">FINANCE AND ACCOUNTING DEPARTMENT</button>
+            </div>
+            <div class="WIP" id="text"><button id="orgs" onclick="orgChartButtons('WIP')" class="WIPButton">WORK IMMERSION PROGRAM</button></div>
+            <div class="OSR" id="text"><button id="orgs" onclick="orgChartButtons('OSR')" class="OSRButton">OFFICE OF THE SCHOOL REGISTRAR</button></div>
+            <div class="LRC" id="text"><button id="orgs" onclick="orgChartButtons('LRC')" class="LRCButton">LEARNING RESOURCE CENTER</button></div>
+            <div class="HS" id="text"><button id="orgs" onclick="orgChartButtons('HS')" class="HSButton">HEALTH SERVICES</button></div>
+            <div class="OSS" id="text"><button id="orgs" onclick="orgChartButtons('OSAS')" class="OSSButton">OFFICE OF THE STUDENT AFFAIRS AND
+                    SERVICES</button></div>
+            <div class="GCD" id="text"><button id="orgs" onclick="orgChartButtons('GCDB')" class="GCDBButton">GUIDANCE AND COUNSELING DEPARTMENT</button>
+            </div>
+        </div>
+        <div id="backgroundDilim">
+            <button id="back" onclick="backs()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"
+                    id="Return-2--Streamline-Core" height="50" width="50">
+                    <desc>Return 2 Streamline Icon: https://streamlinehq.com</desc>
+                    <g id="return-2--arrow-return-enter-keyboard">
+                        <path id="Union" fill="#8fbffa" fill-rule="evenodd"
+                            d="M6.545 0.998a1 1 0 0 0 0 2h2.728a2.638 2.638 0 0 1 0 5.275H4.817V6.545a1 1 0 0 0 -1.707 -0.707L0.384 8.564a1.004 1.004 0 0 0 -0.22 1.09c0.049 0.119 0.121 0.23 0.218 0.327l2.728 2.728a1 1 0 0 0 1.707 -0.707v-1.729h4.456a4.638 4.638 0 1 0 0 -9.275H6.545Z"
+                            clip-rule="evenodd" stroke-width="1"></path>
+                    </g>
+                </svg>
+            </button>
+            <div id="imageDisplay">
+                <img src="" alt="" id="image">
+            </div>
+        </div>
     </div>
 
     <div id="strand">
@@ -55,22 +88,22 @@
 
         <div id="infoAboutStrand">
 
-            <div id = "gasInfo" >
+            <div id="gasInfo" class="divs">
                 <nav>
-                    <li><button id = "GasButtonAbout">About</button></li>
-                    <li><button id = "GasButtonCourse">Course</button></li>
+                    <li><button id="GasButtonAbout">About</button></li>
+                    <li><button id="GasButtonCourse">Course</button></li>
 
                 </nav>
-                <div id = "aboutGas" class = "infos">
-                    <img src="pcaatLogo.png">
-                    <p>The General Academic Strand (GAS) is designed for students who have a wide range of interests and may not have yet decided on a specific career path. It provides a comprehensive education that emphasizes critical thinking, communication skills, and a strong foundation in various academic disciplines. Students in the GAS strand are encouraged to explore different subjects, develop analytical abilities, and prepare for further studies in college.</p>
+                <div id="aboutGas" class="infos">
+                    <img src="/logo/gasLogo.png">
+                    <p>The General Academic Strand (GAS) is designed for students who have a wide range of interests and
+                        may not have yet decided on a specific career path. It provides a comprehensive education that
+                        emphasizes critical thinking, communication skills, and a strong foundation in various academic
+                        disciplines. Students in the GAS strand are encouraged to explore different subjects, develop
+                        analytical abilities, and prepare for further studies in college.</p>
                 </div>
                 <div id="coursesGas">
                     <ul>
-                        <li>Humanities and Social Sciences (HUMSS)</li>
-                        <li>Accountancy, Business, and Management (ABM)</li>
-                        <li>Science, Technology, Engineering, and Mathematics (STEM)</li>
-                        <li>Information and Communications Technology (ICT)</li>
                         <li>Education</li>
                         <li>Psychology</li>
                         <li>Political Science</li>
@@ -80,72 +113,183 @@
                     </ul>
                 </div>
             </div>
-            <div id = "humsInfo" class = "infos">
+            <div id="humsInfo" class="divs">
                 <nav>
-                    <li><button id = "humsButtonAbout">About</button></li>
-                    <li><button id = "humsButtonCourse">Course</button></li>
+                    <li><button id="humsButtonAbout">About</button></li>
+                    <li><button id="humsButtonCourse">Course</button></li>
                 </nav>
-                <div id="aboutHums" class = "infos">
+                <div id="aboutHums" class="infos">
 
-                    <img src="pcaatLogo.png">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est id laboriosam necessitatibus odit repellat exercitationem minima eius eaque impedit sed officia incidunt harum ipsum rerum, quo minus tempore alias error?</p>
+                    <img src="/logo/humsLogo.png">
+                    <p>The HUMSS strand immerses its students in different critical thinking and understanding
+                        activities in the learning process. This helps them become more socially aware of the world
+                        around them and gives them an important overview of what they will learn later in college</p>
                 </div>
                 <div id="coursesHums">
                     <ul>
-                        <li>sad</li>
+                        <li>Communication Arts</li>
+                        <li>Bachelor of Arts Major in Philosophy</li>
+                        <li>Education</li>
+                        <li>Journalism</li>
+                        <li>Literature</li>
+                        <li>Political Science</li>
+                        <li>Sociology</li>
+                        <li>International Affairs</li>
+                        <li>Creative Writing</li>
+                        <li>Economics</li>
+                        <li>Asian Studies</li>
+                        <li>Architecture</li>
+                        <li>Criminology</li>
+                        <li>Secondary Education</li>
+                        <li>Elementary Education</li>
+                        <li>Communication</li>
+                        <li>Philosophy</li>
+                        <li>Bachelor of Arts Major in Literature</li>
+                        <li>Psychology</li>
+                        <li>Statistics and Probability</li>
                     </ul>
                 </div>
             </div>
-            <div id = "abmInfo">
+            <div id="abmInfo" class="divs">
                 <nav>
-                    <li><button id = "abmButtonAbout">About</button></li>
-                    <li><button  id = "abmButtonCourse">Course</button></li>
+                    <li><button id="abmButtonAbout">About</button></li>
+                    <li><button id="abmButtonCourse">Course</button></li>
                 </nav>
-                <div id="aboutAbm" class = "infos">
-                    <img src="pcaatLogo.png">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est id laboriosam necessitatibus odit repellat exercitationem minima eius eaque impedit sed officia incidunt harum ipsum rerum, quo minus tempore alias error?</p>
+                <div id="aboutAbm" class="infos">
+                    <img src="/logo/abmLogo.png">
+                    <p>ABM there is a shorter sales cycle involved. ABM involves marketing directly to the most
+                        attractive target accounts, by doing so you can eliminate unqualified prospects early. By
+                        focusing on the accounts that are likely to convert, you can minimize time wasting, save costs
+                        and lower risks.</p>
 
                 </div>
                 <div id="coursesAbm">
                     <ul>
-                        <li>tite</li>
+                        <li>Entrepreneurship</li>
+                        <li>Business Administration</li>
+                        <li>Marketing</li>
+                        <li>Human Resource</li>
+                        <li>Economics</li>
+                        <li>Bs Foreign Service</li>
+                        <li>Business</li>
+                        <li>Accounting</li>
+                        <li>Administrative Assistant diploma</li>
+                        <li>International affairs</li>
+                        <li>Business economics</li>
+                        <li>Business Math</li>
+                        <li>Commerce</li>
+                        <li>Accountancy</li>
+                        <li>Business finance</li>
+                        <li>Management</li>
+                        <li>Hospitality Management</li>
+                        <li>BS Tourism Management</li>
+                        <li>Accounting information system</li>
+                        <li>Banking and Finance</li>
+                        <li>BS Community Development</li>
+                        <li>Bachelor of Accounting</li>
+                        <li>BS Customs Administration</li>
+                        <li>Business ethics and social responsibility</li>
                     </ul>
                 </div>
             </div>
-            <div id = "stemInfo" class = "infos">
+            <div id="stemInfo" class="divs">
                 <nav>
-                    <li><button id = "StemButtonAbout">About</button></li>
-                    <li><button id = "StemButtonCourse">Course</button></li>
+                    <li><button id="StemButtonAbout">About</button></li>
+                    <li><button id="StemButtonCourse">Course</button></li>
                 </nav>
-                <div id="aboutStem" class = "infos">
-                    <img src="pcaatLogo.png">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est id laboriosam necessitatibus odit repellat exercitationem minima eius eaque impedit sed officia incidunt harum ipsum rerum, quo minus tempore alias error?</p>
+                <div id="aboutStem" class="infos">
+                    <img src="/logo/stemLogo.png">
+                    <p>STEM education stimulates critical thinking by engaging students in actively analyzing,
+                        evaluating, and applying knowledge to solve problems. This approach prepares them for future
+                        challenges where logical reasoning and problem-solving skills are paramount</p>
 
                 </div>
                 <div id="coursesStem">
+                    <ul>
+                        <li>Chemistry</li>
+                        <li>Information Technology</li>
+                        <li>Computer Science</li>
+                        <li>Engineering</li>
+                        <li>Civil Engineering</li>
+                        <li>Mathematics</li>
+                        <li>Biology</li>
+                        <li>Chemical Engineering</li>
+                        <li>Astronomy</li>
+                        <li>Computer Engineering</li>
+                        <li>Geology</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Physics</li>
+                        <li>Aerospace Engineering</li>
+                        <li>Biochemistry</li>
+                        <li>Environmental Science</li>
+                        <li>Statistics</li>
+                        <li>Electrical Engineering</li>
+                        <li>Health Science</li>
+                        <li>Petroleum Engineering</li>
+                        <li>Actuary</li>
+                        <li>Nuclear Engineering</li>
+                        <li>Nursing</li>
+                        <li>Agricultural Engineering</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tvlictInfo" class="divs">
+                <nav>
+                    <li><button id="TvlictButtonAbout">About</button></li>
+                    <li><button id="TvlictButtonCourse">Course</button></li>
+                </nav>
+                <div id="aboutTvlict" class="infos">
+                    <img src="/logo/ictLogo.png">
+                    <p>ICT includes a wide range of communication devices, applications, and networks that enable data transmission and exchange.</p>
+
+                </div>
+                <div id="coursesTvlict">
                     <ul>
                         <li>tite</li>
                     </ul>
                 </div>
             </div>
-            <div id = "tvlictInfo" class = "infos">
-                <nav>
-                    <li><button>About</button></li>
-                    <li><button>Course</button></li>
-                </nav>
-            </div>
 
-            <div id = "tvlheInfo" class = "infos">
+            <div id="tvlheInfo" class="divs">
                 <nav>
-                    <li><button>About</button></li>
-                    <li><button>Course</button></li>
+                    <li><button id="TvlheButtonAbout">About</button></li>
+                    <li><button id="TvlheButtonCourse">Course</button></li>
                 </nav>
+                <div id="aboutTvlhe" class="infos">
+                    <img src="/logo/heLogo.png">
+                    <p>This strand aims to give you job-ready skills that can help you in finding the right employment. This is our classic idea of the TLE subject. Those who are interested in housekeeping, tailoring, care giving, food and beverage services, bread and pastry services, tourism and handicrafts should take this.</p>
+
+                </div>
+                <div id="coursesTvlhe">
+                    <ul>
+                        <li>Culinary Arts</li>
+                        <li>Food and Beverage Services</li>
+                        <li>Bread and Pastry Production</li>
+                        <li>Tourism and Hospitality Management</li>
+                        <li>Housekeeping</li>
+                        <li>Entrepreneurship</li>
+                        <li>Family and Consumer Science</li>
+                        <li>Fashion Design and Merchandising</li>
+                        <li>Caregiving</li>
+                        <li>Basic Drafting and Interior Design</li>
+                    </ul>
+                </div>
             </div>
-            <div id = "adInfo" class = "infos">
+            <div id="adInfo" class="divs">
                 <nav>
-                    <li><button>About</button></li>
-                    <li><button>Course</button></li>
+                    <li><button id="AdButtonAbout">About</button></li>
+                    <li><button id="AdButtonCourse">Course</button></li>
                 </nav>
+                <div id="aboutAd" class="infos">
+                    <img src="/logo/adLogo.png">
+                    <p>The arts and design aims to equip students with the technical skills and knowledge necessary for a career in the arts. It also helps students develop their creativity, critical thinking, and problem-solving skills.</p>
+
+                </div>
+                <div id="coursesAd">
+                    <ul>
+                        <li>tite</li>
+                    </ul>
+                </div>
             </div>
 
         </div>

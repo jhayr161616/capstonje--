@@ -13,49 +13,6 @@ const stemInfo = document.querySelector("#stemInfo");
 const tvlictInfo = document.querySelector("#tvlictInfo");
 const tvlheInfo = document.querySelector("#tvlheInfo");
 const adInfo = document.querySelector("#adInfo");
-let first = false;
-
-gasInfo.style.display = "block";
-humsInfo.style.display = "none";
-abmInfo.style.display = "none";
-stemInfo.style.display = "none";
-tvlictInfo.style.display = "none";
-tvlheInfo.style.display = "none";
-adInfo.style.display = "none";
-
-let string = "block";
-if(!first){
-    gasButton.style.backgroundColor = "#B52412";
-    gasButton.style.color = "white";
-    first = true;
-}
-function buttonClickHandler(clickedButton, color, info) {
-    
-
-    const allButtons = [gasButton, humssButton, abmButton, stemButton, tvlIctButton, tvlHeButton, adButton];
-    allButtons.forEach(button => {
-        button.style.color = "";
-        button.style.backgroundColor = "";
-    
-    });
-    const allInfo = [gasInfo, humsInfo, abmInfo, stemInfo, tvlictInfo, tvlheInfo, adInfo];
-    allInfo.forEach(infos => {
-        infos.style.display = "none";
-    })
-    info.style.display = "block";
-    clickedButton.style.transition = 0.5 + 's' + " ease";
-    clickedButton.style.color = "white";
-    clickedButton.style.backgroundColor = color;
-}
-
-
-gasButton.addEventListener('click', () => buttonClickHandler(gasButton, "#B52412", gasInfo));
-humssButton.addEventListener('click', () => buttonClickHandler(humssButton, "#18882e", humsInfo));
-abmButton.addEventListener('click', () => buttonClickHandler(abmButton, "#ffdc5f", abmInfo));
-stemButton.addEventListener('click', () => buttonClickHandler(stemButton, "blue", stemInfo));
-tvlIctButton.addEventListener('click', () => buttonClickHandler(tvlIctButton, "gray", tvlictInfo));
-tvlHeButton.addEventListener('click', () => buttonClickHandler(tvlHeButton, "purple", tvlheInfo));
-adButton.addEventListener('click', () => buttonClickHandler(adButton, "pink", adInfo));
 
 const gasButtonAbout = document.querySelector('#GasButtonAbout')
 const gasAbout = document.querySelector('#aboutGas');
@@ -76,35 +33,109 @@ const stemButtonAbout = document.querySelector("#StemButtonAbout")
 const stemAbout = document.querySelector('#aboutStem');
 const stemCourse = document.querySelector("#coursesStem");
 const stemButtonCourse = document.querySelector("#StemButtonCourse")
+
+const ictButtonAbout = document.querySelector("#TvlictButtonAbout")
+const ictAbout = document.querySelector('#aboutTvlict');
+const ictCourse = document.querySelector("#coursesTvlict");
+const ictButtonCourse = document.querySelector("#TvlictButtonCourse")
+
+const heButtonAbout = document.querySelector("#TvlheButtonAbout")
+const heAbout = document.querySelector('#aboutTvlhe');
+const heCourse = document.querySelector("#coursesTvlhe");
+const heButtonCourse = document.querySelector("#TvlheButtonCourse")
+
+const adButtonAbout = document.querySelector("#AdButtonAbout")
+const adAbout = document.querySelector('#aboutAd');
+const adCourse = document.querySelector("#coursesAd");
+const adButtonCourse = document.querySelector("#AdButtonCourse")
+let first = false;
+
+gasInfo.style.display = "block";
+humsInfo.style.display = "none";
+abmInfo.style.display = "none";
+stemInfo.style.display = "none";
+tvlictInfo.style.display = "none";
+tvlheInfo.style.display = "none";
+adInfo.style.display = "none";
+
+if (!first) {
+    gasButton.style.backgroundColor = "#B52412";
+    gasButton.style.color = "white";
+    first = true;
+}
+function buttonClickHandler(clickedButton, color, info, about) {
+
+    const allButtons = [gasButton, humssButton, abmButton, stemButton, tvlIctButton, tvlHeButton, adButton];
+    allButtons.forEach(button => {
+        button.style.color = "";
+        button.style.backgroundColor = "";
+
+    });
+    const allInfo = [gasInfo, humsInfo, abmInfo, stemInfo, tvlictInfo, tvlheInfo, adInfo];
+    allInfo.forEach(infos => {
+        infos.style.display = "none";
+    })
+    info.style.display = "block";
+    clickedButton.style.transition = 0.5 + 's' + " ease";
+    clickedButton.style.color = "white";
+    clickedButton.style.backgroundColor = color;
+    about.click()
+
+}
+
+
+gasButton.addEventListener('click', () => buttonClickHandler(gasButton, "#B52412", gasInfo, gasButtonAbout));
+humssButton.addEventListener('click', () => buttonClickHandler(humssButton, "#18882e", humsInfo, humsButtonAbout));
+abmButton.addEventListener('click', () => buttonClickHandler(abmButton, "#ffdc5f", abmInfo, abmButtonAbout));
+stemButton.addEventListener('click', () => buttonClickHandler(stemButton, "blue", stemInfo, stemButtonAbout));
+tvlIctButton.addEventListener('click', () => buttonClickHandler(tvlIctButton, "#4c5c74", tvlictInfo, ictButtonAbout));
+tvlHeButton.addEventListener('click', () => buttonClickHandler(tvlHeButton, "#9a3ccc", tvlheInfo, heButtonAbout));
+adButton.addEventListener('click', () => buttonClickHandler(adButton, "#fb52d9", adInfo, adButtonAbout));
+
+
 let First = false;
 
-if(!First){
+if (!First) {
     gasAbout.style.display = 'flex';
     gasCourse.style.display = 'none';
-    humsCourse.style.display= "none";
+    humsCourse.style.display = "none";
     abmCourse.style.display = "none";
+    stemCourse.style.display = "none"
+    ictCourse.style.display = "none";
+    heCourse.style.display = "none";
+    adCourse.style.display = "none";
     gasButtonAbout.style.backgroundColor = "#cb6254";
 }
 
-gasButtonAbout.addEventListener('click', () => strandHandler(gasButtonAbout, "#B52412", "#cb6254", gasAbout));
-gasButtonCourse.addEventListener('click', () => strandHandler(gasButtonCourse, "#B52412", "#cb6254", gasCourse));
+gasButtonAbout.addEventListener('click', () => strandHandler(gasButtonAbout, "#cb6254", gasAbout));
+gasButtonCourse.addEventListener('click', () => strandHandler(gasButtonCourse, "#cb6254", gasCourse));
 
-humsButtonAbout.addEventListener('click', () => strandHandler(humsButtonAbout, "green", "#18882e", humsAbout));
-humsButtonCourse.addEventListener('click', () => strandHandler(humsButtonCourse, "green", "#18882e", humsCourse));
+humsButtonAbout.addEventListener('click', () => strandHandler(humsButtonAbout, "#27d049", humsAbout));
+humsButtonCourse.addEventListener('click', () => strandHandler(humsButtonCourse, "#27d049", humsCourse));
 
-abmButtonAbout.addEventListener('click', () => strandHandler(abmButtonAbout, "green", "#fffebb", abmAbout));
-abmButtonCourse.addEventListener('click', () => strandHandler(abmButtonCourse, "green", "#fffebb", abmCourse));
+abmButtonAbout.addEventListener('click', () => strandHandler(abmButtonAbout, "#ffd175", abmAbout));
+abmButtonCourse.addEventListener('click', () => strandHandler(abmButtonCourse, "#ffd175", abmCourse));
 
-stemButtonAbout.addEventListener('click', () => strandHandler(stemButtonAbout, "green", "#fffebb", stemAbout));
-stemButtonCourse.addEventListener('click', () => strandHandler(stemButtonCourse, "green", "#fffebb", stemCourse));
+stemButtonAbout.addEventListener('click', () => strandHandler(stemButtonAbout, "#2e2eff", stemAbout));
+stemButtonCourse.addEventListener('click', () => strandHandler(stemButtonCourse, "#2e2eff", stemCourse));
 
-function strandHandler(click, color, whenHover, div){
-    const allButtons = [gasButtonAbout, gasButtonCourse, humsButtonAbout, humsButtonCourse, 
-                        abmButtonAbout, abmButtonCourse, stemButtonAbout, stemButtonCourse];
+ictButtonAbout.addEventListener('click', () => strandHandler(ictButtonAbout, "#728299", ictAbout));
+ictButtonCourse.addEventListener('click', () => strandHandler(ictButtonCourse, "#728299", ictCourse));
+
+heButtonAbout.addEventListener('click', () => strandHandler(heButtonAbout, "#9a3ccc", heAbout));
+heButtonCourse.addEventListener('click', () => strandHandler(heButtonCourse, "#9a3ccc", heCourse));
+
+adButtonAbout.addEventListener('click', () => strandHandler(adButtonAbout, "#fb52d9", adAbout));
+adButtonCourse.addEventListener('click', () => strandHandler(adButtonCourse, "#fb52d9", adCourse));
+function strandHandler(click, whenHover, div) {
+    const allButtons = [gasButtonAbout, gasButtonCourse, humsButtonAbout, humsButtonCourse,
+        abmButtonAbout, abmButtonCourse, stemButtonAbout, stemButtonCourse,
+        ictButtonAbout, ictButtonCourse, heButtonAbout, heButtonCourse,
+        adButtonAbout, adButtonCourse];
     allButtons.forEach(button => {
         button.style.backgroundColor = "#ffffff00";
     })
-    const allDiv = [gasAbout, gasCourse, humsAbout,humsCourse, abmAbout, abmCourse, stemAbout, stemCourse];
+    const allDiv = [gasAbout, gasCourse, humsAbout, humsCourse, abmAbout, abmCourse, stemAbout, stemCourse, ictAbout, ictCourse, heAbout, heCourse, adAbout, adCourse];
     allDiv.forEach(div => {
         div.style.display = "none";
     })
@@ -112,4 +143,76 @@ function strandHandler(click, color, whenHover, div){
     click.style.backgroundColor = whenHover;
 
 
+}
+
+
+//org
+
+const miso = document.querySelector(".MISOButton");
+const image = document.querySelector("#image");
+const displays = document.querySelector("#imageDisplay")
+const displayerblur = document.querySelector("#backgroundDilim")
+const back = document.querySelector("#back")
+
+
+
+function orgChartButtons(department) {
+    switch (department) {
+        case 'miso':
+            image.src = "/org/miso.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'SHSD':
+            image.src = "/org/SHSD.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'HR':
+            image.src = "/org/HR.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'FAD':
+            image.src = "/org/FAD.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'WIP':
+            image.src = "/org/WIP.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'OSR':
+            image.src = "/org/OSR.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'LRC':
+            image.src = "/org/LRC.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'HS':
+            image.src = "/org/HS.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'OSAS':
+            image.src = "/org/OSAS.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+        case 'GCDB':
+            image.src = "/org/GCDB.png";
+            displays.style.display = "block";
+            displayerblur.style.display = "block";
+            break;
+    }
+}
+
+
+
+function backs() {
+    displayerblur.style.display = "none";
 }

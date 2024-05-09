@@ -93,7 +93,7 @@ body {
 #home {
     height: 100dvh;
     width: 100%;
-    background-image: url("building.png");
+    background-image: url("/home/building.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -150,13 +150,10 @@ body {
     min-width: 12%;
     align-items: center;
     color: white;
+
 }
 
- #strand #pindutanSaStrand aside  {
-    border: 2px red solid;
-    
 
-} 
 #strand #pindutanSaStrand aside li{
     margin: 0;
     padding: 0;
@@ -166,7 +163,7 @@ body {
     color: black;
     text-decoration: none;
 
-    margin:4%;
+    margin: 5%;
     padding: 10%;
     width: 160%;
     text-align: center;
@@ -183,50 +180,53 @@ body {
 
  
 #strand #infoAboutStrand {
-    margin-left: 2%;
+    margin-left: 4%;
     width: 75%;
     height: 80%;
-    border-radius: 5%;
+    border-radius: 30px;
+    overflow: hidden;
 
 }
 #infoAboutStrand nav{
     display: flex;
-    justify-content: space-around;
-
+    justify-content: center;
+    width: 100;
     
 }
 
 #infoAboutStrand nav li{
     display: flex;
     flex-basis: 50%;
+    margin: 0;
+    overflow: hidden;
+    
 }
 #infoAboutStrand nav li button{
     text-decoration: none;
     color: white;
     display: flex;
-    flex-grow: 50;
+    flex-grow: 1;
     justify-content: center;
-    flex-basis: 50%;
-    border-radius: 30px;
+    align-items: center;
     padding: 10%;
     background-color: #dc5a5a00;
     border: none;
     cursor: pointer;
     font-size: 130%;
-}
-#gasInfo button{
-    background-color: #B52412;
-}
-
-#gasInfo {
-    background: url('students.png');
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
+    height: 20%;
+    
 }
 
+#infoAboutStrand nav li button:hover{
+    cursor: pointer;
+    
+}
 
+#strand #infoAboutStrand ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
 #strand #infoAboutStrand ul li{
     color: white;
     font-size: 110%;
@@ -247,52 +247,67 @@ body {
     align-items: center;
 }
 
-#humsInfo {
-    background: url('green.png');
+#gasInfo button{
+    background-color: #B52412;
+}
+
+#gasInfo {
+    background: url('strand/red.png');
     background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 5%;
-
+   
+}
+#humsInfo {
+    background: url('strand/green.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+   
+    
 }
 
 #abmInfo {
-    background: url('yellow.png');
+    background: url('strand/yellow.png');
+    background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 5%;
-
+    
+    
 }
 
 #stemInfo {
-    background-color: blue;
+    background: url('strand/blue.png');
+    background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 5%;
+    
 
 }
 
 #tvlictInfo {
-    background-color: gray;
+    background-image: url("strand/gray.png");
+    background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 5%;
+   
 
 }
 
 #tvlheInfo {
-    background-color: purple;
+    background-image: url("strand/purple.png");
+    background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 5%;
-
+    
 }
 
 #adInfo {
-    background-color: pink;
+    background: url("strand/pink.png");
+    background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 5%;
+    
 
 }
 
@@ -300,7 +315,7 @@ body {
 #FAQ {
     height: 100dvh;
     width: 100%;
-    /* background-color: rgb(81, 22, 230); */
+    background-color: rgb(81, 22, 230);
     margin: 0;
     padding: 0;
 }
