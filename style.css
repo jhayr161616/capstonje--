@@ -17,7 +17,7 @@ body {
     min-height: 100dvh;
     margin: 0;
     padding: 0;
-    background: linear-gradient(141deg, #0fb8ad 0%, #5acfdc 51%, #2cb5e8 80%);
+    
 
 }
 
@@ -101,6 +101,7 @@ body {
     align-items: center;
     color: white;
     font-family: "Poppins", sans-serif;
+    
 }
 
 #homeContent {
@@ -137,7 +138,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    /* background-image: url('StrandBG.jpg'); */
+    background-image: url('building2.jpg');
     background-size: cover;
     
 
